@@ -24,7 +24,7 @@ RUN \
     cmake . && \
     make && \
     make install && \
-    ldconfig && \
+    ldconfig /usr/local/lib/libpcloudcc_lib.so && \
     rm -r /tmp/* && \
     yum clean all
 
