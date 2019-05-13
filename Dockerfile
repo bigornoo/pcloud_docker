@@ -4,27 +4,11 @@ LABEL maintainer="Bigornoo bigornor@nowhere.com"
 
 
 # Start pcloudCC
-COPY files/ /root/
+COPY files/ /bot/
 
 # Build pCloud CC
-RUN useradd -m -d /pcloud -r -s /bin/false pcloudcc && chown pcloudcc:pcloudcc /pcloud
+RUN useradd -m -d /pcloud -r -s /bin/false bot && chown bot:bot /pcloud && chown bot:bot /bot
 RUN \
-    yum install -y fuse redhat-lsb-core git make deltarpm zlib-devel.x86_64 boost-devel.x86_64 boost-static fuse-devel.x86_64 glibc-devel.x86_64 cmake gcc systemd-devel boost-system boost-program-options gcc-c++ && \
-    mkdir -p /tmp/console-client && \
-    git clone https://github.com/pcloudcom/console-client.git /tmp/console-client/ \
-    && \
-    cd /tmp/console-client/pCloudCC/lib/pclsync/ && \
-    make clean && \
-    make fs && \
-    cd ../mbedtls/ && \
-    cmake . && \
-    make clean && \
-    make && \
-    cd ../.. && \
-    cmake . && \
-    make && \
-    make install && \
-    ldconfig /usr/local/lib/ && \
-    rm -r /tmp/* && \
-    yum clean all
+    yum install -y fuse redhat-lsb-core && yum localinstall -y https://github.com/bigornoo/console-client/blob/master/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm
+   
 
