@@ -13,7 +13,7 @@ services:
 #    cap_add:
 #      - ALL
     volumes:
-      - /volumes/pcloud:/pcloud
+      - /volumes/pcloud:/pcloud:ro
     secrets:
       - secret1
 secrets:
