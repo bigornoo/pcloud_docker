@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM centos:7
 
 LABEL maintainer="Bigornoo bigornor@nowhere.com"
 
@@ -7,11 +7,9 @@ LABEL maintainer="Bigornoo bigornor@nowhere.com"
 COPY files/ /root/
 
 # Build pCloud CC
-RUN useradd -m -d /pcloud -r -s /bin/false pcloudcc
+RUN useradd -m -d /pcloud -r -s /bin/false pcloudcc && chown pcloudcc:pcloudcc /pcloud
 RUN \
-    apt-get update && \
-    apt-get install -y cmake zlib1g-dev libboost-system-dev libboost-program-options-dev libpthread-stubs0-dev libfuse-dev git g++ libudev-dev lsb-release fuse kmod nano \
-    && \
+    yum install -y zlib-devel.x86_64 boost-devel.x86_64 boost-static fuse-devel.x86_64 glibc-devel.x86_64 cmake gcc systemd-devel boost-system boost-program-options gcc-c++ && \
     mkdir -p /tmp/console-client && \
     git clone https://github.com/pcloudcom/console-client.git /tmp/console-client/ \
     && \
@@ -28,6 +26,5 @@ RUN \
     make install && \
     ldconfig && \
     rm -r /tmp/* && \
-    apt-get -y autoremove && \
-    apt-get -y clean
+    yum clean all
 
