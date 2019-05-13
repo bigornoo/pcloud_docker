@@ -9,11 +9,11 @@ services:
     environment:
       - PCLOUDUSER=erion_lampus@yahoo.fr
     network_mode: host
-#    privileged: true
-#    cap_add:
-#      - ALL
+    privileged: true
+    cap_add:
+      - ALL
     volumes:
-      - /volumes/pcloud:/pcloud:ro
+      - /volumes/pcloud:/pcloud
     secrets:
       - secret1
 secrets:
