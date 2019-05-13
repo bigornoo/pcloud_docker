@@ -1,5 +1,6 @@
 FROM debian:latest
-MAINTAINER bigornoo "https://github.com/bigornoo"
+
+LABEL maintainer="Bigornoo bigornor@nowhere.com"
 
 
 # Start pcloudCC
