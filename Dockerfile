@@ -10,7 +10,7 @@ COPY files/ /bot/
 RUN useradd -m -d /pcloud -r -s /bin/false bot && chown bot:bot /pcloud && chown -R bot:bot /bot
 RUN \
     yum install -y wget fuse redhat-lsb-core && \
-    wget https://github.com/bigornoo/console-client/blob/master/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm -O /tmp/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm && \
+    wget https://github.com/bigornoo/pcloud_docker/blob/master/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm -O /tmp/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm && \
     yum localinstall -y /tmp/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm
    
 
