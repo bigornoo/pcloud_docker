@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  pcloudcc:
+    container_name: pcloudcc
+    build:
+      context: .
+    image: bigorno/pcloudccINdocker:1.0
+    restart: unless-stopped
+    environment:
+      - PCLOUDUSER=erion_lampus@yahoo.fr
+    network_mode: host
+#    privileged: true
+#    cap_add:
+#      - ALL
+    volumes:
+      - /pcloud:/pcloud
+    secrets:
+      - secret1
+secrets:
+  pcloudpass:
+    file: /root/secret1
