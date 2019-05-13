@@ -3,6 +3,6 @@ Doc :
 - capabilities needed : https://github.com/s3fs-fuse/s3fs-fuse/issues/647
 
 Run :  
-````
+```
 # docker run -ti -v /volumes/pcloud/mount/:/pcloud/:shared --cap-add SYS_ADMIN --device /dev/fuse --name pcloudcc bigorno/pcloudcc_in_docker:latest bash
 ```
