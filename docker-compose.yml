@@ -17,5 +17,5 @@ services:
     secrets:
       - secret1
 secrets:
-  pcloudpass:
+  secret1:
     file: /root/secret1

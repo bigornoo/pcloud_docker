@@ -15,6 +15,6 @@ else
   # first run, save pCloud password
   echo "pCloud initial run, registering password.  You may remove the secret on the next run."
   touch /pcloudpassSaved
-  su - pcloudcc -s /bin/bash -c 'pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secret/pcloudpass'
+  su - pcloudcc -s /bin/bash -c 'pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1'
   rm  -f  /root/secret1
 fi
