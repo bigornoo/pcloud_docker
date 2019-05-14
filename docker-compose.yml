@@ -5,9 +5,9 @@ services:
       - PCLOUDUSER=erion_lampus@yahoo.fr
       - IMAGE_TAG=v0.8.3
     container_name: pcloudcc
-    image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
     build:
-      context: .   
+      context: .
+      image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
     restart: unless-stopped
     cap_add:
       - SYS_ADMIN
