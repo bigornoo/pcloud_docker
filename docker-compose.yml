@@ -17,12 +17,13 @@ services:
       - /volumes/pcloud:/pcloud
     secrets:
       - secret1
+  secrets:
+  secret1:
+    file: /root/secret1
 
   extends_versions: 
     extends: pcloudcc
     image: "bigorno/pcloudcc_in_docker:${TAG}"
 
-secrets:
-  secret1:
-    file: /root/secret1
+
 
