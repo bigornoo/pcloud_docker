@@ -19,5 +19,5 @@ services:
 
 secrets:
   secret1:
-    file: /root/secret1
+    file: ./secret1
 
