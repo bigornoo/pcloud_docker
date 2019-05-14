@@ -7,7 +7,7 @@ services:
     container_name: pcloudcc
     build:
       context: .
-      image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
+    image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
     restart: unless-stopped
     cap_add:
       - SYS_ADMIN
