@@ -8,10 +8,10 @@ services:
     restart: unless-stopped
     environment:
       - PCLOUDUSER=erion_lampus@yahoo.fr
-    network_mode: host
-    privileged: true
     cap_add:
-      - ALL
+      - SYS_ADMIN
+    devices:
+      - "/dev/fuse:/dev/fuse"
     volumes:
       - /volumes/pcloud:/pcloud
     secrets:
