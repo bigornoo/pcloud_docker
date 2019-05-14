@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# Specials thhanks to James 
+# https://github.com/jamesfkinney/plex-pcloud
 
 if  [ -e /pcloudpassSaved ]; then
   # subsequent run, pCloud password already saved
