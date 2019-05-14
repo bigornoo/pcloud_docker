@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  pcloudcc:
+    environment: 
+      - PCLOUDUSER=youruserhere
+    container_name: pcloudcc
+    build:
+      context: .
+      args:
+        - PCLOUDUSER=youruserhere
+    image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    devices:
+      - "/dev/fuse:/dev/fuse"
+    volumes:
+      - /volumes/pcloud:/pcloud:shared
+    secrets:
+      - secret1
+
+secrets:
+  secret1:
+    file: ./secret1
+
