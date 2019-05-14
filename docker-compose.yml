@@ -1,8 +1,7 @@
-version: '2'
+version: '3'
 services:
   pcloudcc:
     environment: 
-      - TAG=v0.8.3
       - PCLOUDUSER=erion_lampus@yahoo.fr
     container_name: pcloudcc
     build:
@@ -17,13 +16,14 @@ services:
       - /volumes/pcloud:/pcloud
     secrets:
       - secret1
-  secrets:
-  secret1:
-    file: /root/secret1
 
   extends_versions: 
+    environment: 
+      - TAG=v0.8.3
     extends: pcloudcc
     image: "bigorno/pcloudcc_in_docker:${TAG}"
 
-
+secrets:
+  secret1:
+    file: /root/secret1
 
