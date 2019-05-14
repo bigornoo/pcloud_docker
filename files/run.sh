@@ -5,7 +5,7 @@ if  [ -e /pcloudpassSaved ]; then
   # subsequent run, pCloud password already saved
     if ! pgrep -x "fusermount" > /dev/null ; then
       echo "pCloud not running, starting..."
-      pcloudcc -u $PCLOUDUSER -m /pcloud'
+      pcloudcc -u $PCLOUDUSER -m /pcloud
     fi
 else
     #  first run, save pCloud password
