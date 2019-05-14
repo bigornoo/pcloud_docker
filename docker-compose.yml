@@ -4,7 +4,7 @@ services:
     environment: 
       - PCLOUDUSER=erion_lampus@yahoo.fr
     container_name: pcloudcc
-    image: bigorno/pcloudcc_in_docker:latest
+    image: "bigorno/pcloudcc_in_docker:latest"
     build:
       context: .   
     restart: unless-stopped
@@ -13,7 +13,7 @@ services:
     devices:
       - "/dev/fuse:/dev/fuse"
     volumes:
-      - /volumes/pcloud:/pcloud
+      - /volumes/pcloud:/pcloud:shared
     secrets:
       - secret1
 
