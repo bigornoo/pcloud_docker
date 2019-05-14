@@ -1,11 +1,11 @@
-version: '3'
+version: '3.7'
 services:
   pcloudcc:
     environment: 
       - PCLOUDUSER=erion_lampus@yahoo.fr
     container_name: pcloudcc
+    image: bigorno/pcloudcc_in_docker:latest
     build:
-      image: bigorno/pcloudcc_in_docker:latest
       context: .   
     restart: unless-stopped
     cap_add:
