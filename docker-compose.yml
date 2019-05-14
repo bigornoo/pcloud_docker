@@ -3,7 +3,6 @@ services:
   pcloudcc:
     environment: 
       - PCLOUDUSER=erion_lampus@yahoo.fr
-      - IMAGE_TAG=v0.8.3
     container_name: pcloudcc
     build:
       context: .
