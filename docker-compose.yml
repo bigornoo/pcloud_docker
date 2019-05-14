@@ -6,6 +6,8 @@ services:
     container_name: pcloudcc
     build:
       context: .
+      args:
+        - PCLOUDUSER=erion_lampus@yahoo.fr
     image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
     restart: unless-stopped
     cap_add:

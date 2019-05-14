@@ -6,6 +6,8 @@ LABEL maintainer="Bigornoo bigornor@nowhere.com"
 # Start pcloudCC
 COPY files/ /root/
 
+# Build the image with pcloud user
+ARG PCLOUDUSER
 
 # Build pCloud CC
 
