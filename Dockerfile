@@ -16,7 +16,6 @@ RUN \
     yum localinstall -y /root/pCloudCC-2.0.1.1-1.1.el7.jfoto.x86_64.rpm 
 RUN \
     chmod +x /root/run.sh && \
-    chmod 600 /root/secret1 && \
     [[ ! -e /pcloud ]] && mkdir /pcloud && \
     chown root:root /pcloud
    
