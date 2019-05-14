@@ -4,7 +4,7 @@ services:
     environment: 
       - PCLOUDUSER=erion_lampus@yahoo.fr
     container_name: pcloudcc
-    image: "bigorno/pcloudcc_in_docker:latest"
+    image: "bigorno/pcloudcc_in_docker:${TAG}"
     build:
       context: .   
     restart: unless-stopped
