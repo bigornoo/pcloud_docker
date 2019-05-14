@@ -2,12 +2,12 @@ version: '3.7'
 services:
   pcloudcc:
     environment: 
-      - PCLOUDUSER=erion_lampusa@yahoo.fr
+      - PCLOUDUSER=youruserhere
     container_name: pcloudcc
     build:
       context: .
       args:
-        - PCLOUDUSER=erion_lampusa@yahoo.fr
+        - PCLOUDUSER=youruserhere
     image: "bigorno/pcloudcc_in_docker:${IMAGE_TAG}"
     restart: unless-stopped
     cap_add:
