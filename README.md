@@ -6,3 +6,9 @@ Run :
 ```
 # docker run -ti -v /volumes/pcloud/mount/:/pcloud/:shared --cap-add SYS_ADMIN --device /dev/fuse --name pcloudcc bigorno/pcloudcc_in_docker:latest bash
 ```
+Run :  
+```
+# IMAGE_TAG=latest docker-compose build
+# IMAGE_TAG=vx.y.z docker-compose build
+# IMAGE_TAG=latest docker-compose up -d
+``` 
