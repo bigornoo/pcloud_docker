@@ -17,12 +17,6 @@ services:
     secrets:
       - secret1
 
-  extends_versions: 
-    environment: 
-      - TAG=v0.8.3
-    extends: pcloudcc
-    image: "bigorno/pcloudcc_in_docker:${TAG}"
-
 secrets:
   secret1:
     file: /root/secret1
