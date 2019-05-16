@@ -25,13 +25,13 @@ trap 'fusermount -u /pcloud' SIGTERM
       # subsequent run, pCloud password already saved
       if ! pgrep -x "fusermount" > /dev/null ; then
           echo "pCloud not running, starting..."
-          pcloudcc -u $PCLOUDUSER -m /pcloud -d
+          pcloudcc -u $PCLOUDUSER -m /pcloud 
       fi
   else
     #  first run, save pCloud password
     echo "pCloud initial run, registering password.  You may remove the secret on the next run."
     touch /pcloudpassSaved
-    pcloudcc -u $PCLOUDUSER -d -s -m /pcloud -p </run/secrets/secret1 
+    pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1 
   fi
   pid=$(pidof fusermount)  
 
