@@ -10,7 +10,7 @@ cleanup() {
 
 
 #Trap SIGTERM
-trap 'true' SIGTERM
+trap 'cleanup' SIGTERM
 #Execute command
   if  [ -e /pcloudpassSaved ]; then
       # subsequent run, pCloud password already saved
@@ -26,8 +26,7 @@ trap 'true' SIGTERM
   fi
 #Wait
 wait $!
-#Cleanup
-cleanup
+
 
 
 
