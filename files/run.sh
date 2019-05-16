@@ -13,6 +13,7 @@ term_handler() {
   exit 143; # 128 + 15 -- SIGTERM
 }
 
+  trap 'fusermount -u /pcloud' 0 1 2 3 6 9 15
 
 # setup handlers
 # on callback, kill the last background process, which is `tail -f /dev/null` and execute the specified handler
@@ -33,7 +34,6 @@ term_handler() {
     touch /pcloudpassSaved
     pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1 
   fi
-  trap 'fusermount -u /pcloud' SIGTERM
   pid=$(pidof fusermount)  
 
 
