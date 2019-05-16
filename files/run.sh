@@ -14,3 +14,4 @@ else
     touch /pcloudpassSaved
     pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1
 fi
+fusermount -u /pcloud
