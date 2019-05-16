@@ -37,7 +37,7 @@ trap 'term_handler' SIGTERM
 # wait forever
 while true
 do
-  tail -f /dev/null & wait $(pid)
+  tail -f /dev/null & wait ${!}
 done
 
 
