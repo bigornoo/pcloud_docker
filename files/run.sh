@@ -25,7 +25,7 @@ trap 'cleanup' SIGTERM
     pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1
   fi
 #Wait
-wait $!
+wait $(pidof fusermount)
 
 
 
