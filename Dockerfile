@@ -11,7 +11,7 @@ ARG IMAGE_TAG=latest
 # Build pCloud CC
 
 RUN \
-    yum install -y fuse redhat-lsb-core &&     
+    yum install -y fuse redhat-lsb-core   
 
 # Start pcloudCC
 COPY files/ /root/
