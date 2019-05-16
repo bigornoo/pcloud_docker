@@ -9,6 +9,8 @@ COPY files/ /root/
 # Build the image with pcloud user
 ARG PCLOUDUSER
 
+ARG IMAGE_TAG=latest
+
 # Build pCloud CC
 
 RUN \
