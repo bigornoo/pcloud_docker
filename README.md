@@ -4,11 +4,13 @@ Doc :
 
 Run :  
 ```
-# docker run -ti -v /volumes/pcloud/mount/:/pcloud/:shared --cap-add SYS_ADMIN --device /dev/fuse --name pcloudcc bigorno/pcloudcc_in_docker:latest bash
+# docker run -ti -v /volumes/pcloud/mount/:/pcloud/:shared --cap-add SYS_ADMIN --device /dev/fuse --name pcloudcc bigorno/pcloudcc_in_docker:latest
 ```
-Run :  
+Run with docker-compose :  
 ```
 # IMAGE_TAG=latest docker-compose build
 # IMAGE_TAG=vx.y.z docker-compose build
 # IMAGE_TAG=latest docker-compose up [--build] -d
 ``` 
+
+Please, use a file named **secret1** to store your pCloud password. And adapt _docker-compose_ file to your needs, and rename it to *docker-compose.yml*, without **template** extension.

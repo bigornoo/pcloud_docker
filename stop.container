@@ -1,2 +1,0 @@
-docker-compose stop
-fusermount -u /volumes/pcloud
