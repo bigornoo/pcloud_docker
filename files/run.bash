@@ -15,8 +15,3 @@
     touch /pcloudpassSaved
     exec pcloudcc -u $PCLOUDUSER -s -m /pcloud -p </run/secrets/secret1 
   fi
-#  while :;do
-#    echo "Hello - ${SECONDS} elapsed"
-#    sleep 1s
-#  done
-
