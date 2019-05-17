@@ -1,6 +1,7 @@
 Doc :  
 - share option for docker bind volumes [here](https://medium.com/kokster/kubernetes-mount-propagation-5306c36a4a2d) and [here : Configure bind propagation](https://docs.docker.com/storage/bind-mounts/).
 - capabilities needed : https://github.com/s3fs-fuse/s3fs-fuse/issues/647
+- Special thanks to James Kinney : https://github.com/jamesfkinney/plex-pcloud
 
 Run :  
 ```
